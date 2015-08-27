@@ -24,9 +24,9 @@ class IndexController extends Controller{
         $categoriesArr = $categories->fetchAll();
         $keys = count($categoriesArr);
 
-        
+
         for ($i=0; $i<$keys; $i++) {
-           echo $categoriesArr[$i]['category_name']."<br>";
+            $categoriesArr[$i]['category_name'];
         }
 
         return $this->render("IndexPlBundle:Index:index.html.twig", array(
