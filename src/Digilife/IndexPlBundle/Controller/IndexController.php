@@ -14,6 +14,20 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class IndexController extends Controller{
 
     public function indexAction() {
+        $dsn = 'mysql:dbname=digilife;host=127.0.0.1';
+        $user = 'root';
+        $password = '';
+
+        $db = new \PDO($dsn, $user, $password);
+
+        $categories = $db->query('SELECT category_name FROM categories WHERE 1');
+        $categoriesArr = $categories->fetchAll();
+        $keys = count($categoriesArr);
+
+        
+        for ($i=0; $i<$keys; $i++) {
+           echo $categoriesArr[$i]['category_name']."<br>";
+        }
 
         return $this->render("IndexPlBundle:Index:index.html.twig", array(
             'phone_num'=>'+48(533)157163',
