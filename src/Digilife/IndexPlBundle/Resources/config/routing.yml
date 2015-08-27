@@ -1,0 +1,5 @@
+index_pl_homepage:
+    path:     /{lang}
+    defaults: { _controller: IndexPlBundle:Index:index, lang: pl }
+    requirements:
+      lang: pl|en
