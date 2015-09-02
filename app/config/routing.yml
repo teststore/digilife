@@ -1,3 +1,8 @@
+categories:
+    resource: "@CategoriesBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 index_pl:
     resource: "@IndexPlBundle/Resources/config/routing.yml"
     prefix:   /
