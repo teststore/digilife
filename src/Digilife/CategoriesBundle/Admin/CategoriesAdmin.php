@@ -22,6 +22,8 @@ class CategoriesAdmin extends Admin {
      * @param \Sonata\AdminBundle\Show\ShowMapper $showMapper
      * @return void
      */
+
+
     protected function configureShowField(ShowMapper $showMapper)
     {
         $showMapper
@@ -77,12 +79,12 @@ class CategoriesAdmin extends Admin {
      *
      * @return void
      */
-    protected function configureSideMenu(MenuItemInterface $menu, $action, Admin $childAdmin = null)
-    {
-        $menu->addChild(
-            $action == 'edit' ? 'Kategorie' : 'Edycja kategorii',
-            array('uri' => $this->generateUrl(
-                $action == 'edit' ? 'show' : 'edit', array('id' => $this->getRequest()->get('categoryName'))))
-        );
-    }
+//    protected function configureSideMenu(MenuItemInterface $menu, $action, Admin $childAdmin = null)
+//    {
+//        $menu->addChild(
+//            $action == 'edit' ? 'Kategorie' : 'Edycja kategorii',
+//            array('uri' => $this->generateUrl(
+//                $action == 'edit' ? 'show' : 'edit', array('id' => $this->getRequest()->get('categoryName'))))
+//        );
+//    }
 }
